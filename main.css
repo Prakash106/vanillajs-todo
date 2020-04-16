@@ -41,3 +41,13 @@ input {
     width: 40%;
     height: 100%;
 }
+.btn{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.listItem{
+    display: flex;
+    justify-content: space-between;
+}
