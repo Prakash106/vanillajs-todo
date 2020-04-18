@@ -1,35 +1,31 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="./main.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css" />
 </head>
 
 <body>
     <div class="main">
-        <h1>Todo App</h1>
-        <div>
-            <input id="inputTask" type="text">
+        <div class="header">
+            <div class="left-header">
+                <h3>Today's Task</h3>
+            </div>
+            <div class="left-header">
+                Completed
+            </div>
         </div>
-        <div>
+        <div class="input-header">
+            <input id="inputTask" placeholder="Enter a task" type="text">
+            <button class="button" onclick="addTodoItem()">Add Task</button>
+        </div>
+        <div class="list-header">
             <ul id="todoList">
-                <li>
-                    List 1
-                </li>
-                <li>
-                    List 2
-                </li>
-                <li>
-                    List 3
-                </li>
-                <li>
-                    List 4
+                <li class="listItem" onclick="editItem(event)">
+                    <span>List 1</span>
+                    <button class="btn-delete" onclick="deleteItem(event);">Delete</button>
                 </li>
             </ul>
-        </div>
-        <div id="bottom">
-            <a href="#">All</a>
-            <a href="#">Active</a>
-            <a href="#">Completed</a>
         </div>
 </body>
 <script src="./script.js"></script>
