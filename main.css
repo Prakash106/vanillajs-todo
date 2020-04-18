@@ -1,5 +1,6 @@
 body {
-    background-color: #efefef;
+    background-color: #35495e;
+    font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -9,15 +10,43 @@ ul {
 
 ul>li {
     text-align: left;
-    background-color: #ddd;
-    margin-top: 1%;
-    padding: 2%;
+    color: #f0efef;
+    border-bottom: 1px solid #222831;
+    /* border-top: 1px solid #abafb3; */
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.input-header {
+    display: flex;
+    justify-content: start;
+}
+
+.list-header {
+    margin-top: 30px;
 }
 
 input {
-    width: 100%;
-    font-size: 23px;
+    outline: none;
+    border: 1px solid#efefef;
+    border-radius: 4px;;
+    width: 40%;
+    padding-left: 10px;
+    font-size: 18px;
     height: 40px;
+}
+
+.button {
+    background-color: #ee8572;
+    color:white;
+    cursor: pointer;
+    outline: none;
+    font-size: 14px;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
 }
 
 #bottom {
@@ -33,18 +62,26 @@ input {
 }
 
 .main {
-    display: block;
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5%;
-    width: 40%;
+    width: 90%;
     height: 100%;
 }
-.btn{
+
+.header {
+    color: #fafafa;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.btn-delete{
     cursor: pointer;
     background: transparent;
     border: none;
+    font-size: 14px;
+    color:#ff677d
 }
 
 .listItem{
