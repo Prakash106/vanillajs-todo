@@ -8,11 +8,12 @@ ul {
     padding-left: 0;
 }
 
-ul>li {
+ul > li {
     text-align: left;
     color: #f0efef;
     border-bottom: 1px solid #222831;
-    /* border-top: 1px solid #abafb3; */
+    display: flex;
+    justify-content: space-between;
     padding-bottom: 10px;
     padding-top: 10px;
 }
@@ -69,6 +70,10 @@ input {
     height: 100%;
 }
 
+.hide {
+    visibility: hidden;
+}
+
 .header {
     color: #fafafa;
     display: flex;
@@ -84,7 +89,26 @@ input {
     color:#ff677d
 }
 
-.listItem{
+.empty {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    height: 20%;
+    font-size: 20px;
+    color: white;
+    padding-top: 8%;
+    border-radius: 5px;
+    border: 2px dashed #ccc;
+    background-color: #30475e
+}
+
+.skrew {
+    border: 1px solid red;
+    transform: translateX();
+    animation: skrew-animation 1s;
+}
+
+@keyframes skrew-animation {
+    from {border: 1px solid red}
+    to {border: 2px solid red}
 }

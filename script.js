@@ -7,9 +7,9 @@ input.addEventListener("keypress", function (e) {
     }
 })
 
+
 function listElement(item) {
     let list = document.createElement('li');
-    list.classList.add("listItem")
     list.setAttribute("onclick", "editItem(event)")
     let pTag = document.createElement('span');
     let textNode = document.createTextNode(item)
@@ -25,13 +25,17 @@ function listElement(item) {
 }
 
 function addTodoItem() {
-    let itemNode = listElement(input.value);
-    list.appendChild(itemNode)
-    input.value = ''
+    if (input.value) {
+        let itemNode = listElement(input.value);
+        list.appendChild(itemNode)
+        input.value = ''
+    }
+    checkIsEmpty()
 }
 function deleteItem(event) {
     let target = event.target
     target.parentNode.parentNode.removeChild(target.parentNode)
+    checkIsEmpty()
 }
 
 function editItem(event) {
@@ -46,6 +50,16 @@ function editItem(event) {
             input.value = ""
         }
     })
+}
+
+function checkIsEmpty() {
+    if (list.children.length) {
+        list.classList.remove("hide")
+        document.querySelector(".empty").classList.add("hide")
+    } else {
+        list.classList.add("hide")
+        document.querySelector(".empty").classList.remove("hide")
+    }
 }
 
 function updateTodoItem(target, value) {
